@@ -4,18 +4,34 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>com.log</groupId>
-	<artifactId>HelloLog4j</artifactId>
+	<groupId>com.testing</groupId>
+	<artifactId>HelloJUnit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
-	<name>HelloLog4j</name>
+	<name>HelloJUnit</name>
 	
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<junit.jupiter.version>5.5.2</junit.jupiter.version>
 	</properties>
 	
 	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-core</artifactId>
+		    <version>3.1.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -31,3 +47,4 @@
 	</dependencies>
 	
 </project>
+
