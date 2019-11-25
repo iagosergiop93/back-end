@@ -1,5 +1,0 @@
-15:39:50.960 [main] DEBUG com.log.AppDriver - Debug message
-15:39:50.966 [main] INFO  com.log.AppDriver - Info Message!
-15:39:50.966 [main] WARN  com.log.AppDriver - Warn Message!
-15:39:50.966 [main] ERROR com.log.AppDriver - Error Message!
-15:39:50.966 [main] FATAL com.log.AppDriver - Fatal Message!
