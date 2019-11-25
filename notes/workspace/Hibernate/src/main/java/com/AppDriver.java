@@ -94,7 +94,7 @@ public class AppDriver {
 			// Creating Criteria
 			CriteriaBuilder cb = session.getCriteriaBuilder();
 			CriteriaQuery<User> criteria = cb.createQuery(User.class);
-//			Root<User> root = criteria.from(User.class);
+			Root<User> root = criteria.from(User.class);
 			criteria.select(root);
 			
 			list = session.createQuery(criteria).getResultList();
