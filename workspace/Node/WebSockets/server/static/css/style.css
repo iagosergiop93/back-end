@@ -1,0 +1,11 @@
+body {
+    padding: 3rem 5rem;
+}
+
+.common-style {
+    border: 2px solid rgba(190,190, 190, 0.4);
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
