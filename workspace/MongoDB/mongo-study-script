@@ -1,0 +1,30 @@
+db.posts.insert({
+    title: 'Post One',
+    body: 'Body of post one',
+    category: 'News',
+    likes: 4,
+    tags: ['news', 'events'],
+    user: {
+        name: 'John Doe',
+        status: 'author'
+    },
+    date: Date()
+})
+
+
+db.posts.insert({
+    title: 'Post Two',
+    body: 'Body of post two',
+    category: 'Technology',
+    likes: 6,
+    tags: ['tech', 'java'],
+    user: {
+        name: 'John Doe',
+        status: 'author'
+    },
+    date: Date()
+})
+
+db.posts.find({ category: 'News' })
+
+db.posts.find().pretty()
