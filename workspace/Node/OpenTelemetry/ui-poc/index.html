@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Telemetry POC</title>
+</head>
+<body>
+    
+    <label>Search for book: </label>
+    <input type="text" id="bookName">
+    <button onclick="searchBook()">Search</button>
+
+    <h2 style="margin: 20px 0px;">Results</h2>
+
+    <div id="resultsId">
+
+    </div>
+
+    <script>
+        function searchBook() {
+            var query = encodeURIComponent(document.getElementById('bookName').value);
+            var url = `http://localhost:3000/books/volumes?q=${query}`;
+            fetch(url).then(response => response.json()).then(res => {
+                console.log(res);
+                populateResultList(res.items);
+            })
+        }
+
+        function populateResultList(list) {
+            clearResultsList();
+            var el = document.getElementById('resultsId');
+            list.forEach(element => {
+                var h4 = document.createElement('h4');
+                h4.textContent = element.volumeInfo.title;
+                el.appendChild(h4);
+            });
+        }
+
+        function clearResultsList() {
+            var el = document.getElementById('resultsId');
+            while(el.hasChildNodes()) {
+                el.removeChild(el.childNodes[0])
+            }
+        }
+
+    </script>
+    <script type="module" src="document-load.js"></script>
+</body>
+</html>

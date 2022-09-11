@@ -1,0 +1,27 @@
+{
+  "name": "ui-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "document-load.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.0.4",
+    "@opentelemetry/context-zone": "^1.0.1",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.27.0",
+    "@opentelemetry/instrumentation-document-load": "^0.27.1",
+    "@opentelemetry/instrumentation-xml-http-request": "^0.27.0",
+    "@opentelemetry/sdk-trace-web": "^1.0.1",
+    "install": "^0.13.0",
+    "npm": "^8.5.0"
+  },
+  "devDependencies": {
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "stream-http": "^3.2.0"
+  }
+}
